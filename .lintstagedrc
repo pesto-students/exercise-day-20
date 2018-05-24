@@ -5,5 +5,5 @@
         "git add"
       ]
     },
-    "ignore": [**/*/registerServiceWorker.js]
+    "ignore": ['**/registerServiceWorker.js']
 }
