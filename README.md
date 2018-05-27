@@ -17,3 +17,7 @@ In this exercise, create a TODO application using React and Redux on the client.
 Write tests for the reducers, changes in the user interface, and anything you think is appropriate for testing. On the server side test database connection, and all the CRUD functions.
 
 Note: It is recommended that you write tests first, commit them and then start writing the app code.
+
+## Additional Exercises
+
+Go to `Problems` directory and pass all tests by implementing the functions in index.js
