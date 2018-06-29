@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "author": "Nishant Salhotra",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
+    "jest-cli": "^23.2.0",
+    "mongodb": "^3.1.0",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.5"
   }
