@@ -1,3 +1,3 @@
-export const ADD_TO_DO = 'ADD_TO_DO';
-export const REMOVE_TO_DO = 'REMOVE_TO_DO';
-export const EDIT_TO_DO = 'EDIT_TO_DO';
+export const ADD_TODO = 'ADD_TODO';
+export const REMOVE_TODO = 'REMOVE_TODO';
+export const EDIT_TODO = 'EDIT_TODO';
