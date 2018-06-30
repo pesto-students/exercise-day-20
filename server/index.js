@@ -1,23 +1,36 @@
-const express = require('express');
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+const getDB = require('./database');
+// import express from 'express';
+// import morgan from 'morgan';
+// import { urlencoded, json } from 'body-parser';
+// import cors from 'cors';
+// import getDB from './database';
 
-const PORT = 8080;
+// const PORT = 8080;
 
-const app = express();
+// const app = express();
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json())
+// app.use(urlencoded({ extended: true }));
+// app.use(json());
 
-app.use(cors());
+// app.use(cors());
 
-app.get('/', (req, res) => {
-  res.json('Response from server');
+getDB().then(async (db) => {
+  db.collection('name').insert({ name: 'hello1' });
+  const data = await db.collection('name').find({}).toArray();
+  console.log(data);
+}).catch((err) => {
+  console.log(err);
 });
+// console.log(dbHere.find());
 
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`)
-});
+// logging();
+
+// app.get('/', (req, res) => {
+//   res.json('Response from server');
+// });
+
+// app.listen(PORT, () => {
+//   console.log(`Server started on port ${PORT}`);
+// });
