@@ -4,6 +4,7 @@ const {
   stripper,
   titleize,
   uniqueRandom,
+  linearSearch,
 } = require('.');
 
 describe('modifyObjectKeys', () => {
@@ -53,5 +54,25 @@ describe('uniqueRandom', () => {
     }
 
     expect(true).toBe(true);
+  });
+});
+
+describe('linear search', () => {
+  const array = [2, 4, 1, 3, 1];
+  test('should return the right index of the searched number', () => {
+    const searchElement = 3;
+    expect(linearSearch(array, searchElement)).toBe(3);
+  });
+  test('should only allow numbers as a search element', () => {
+    const searchElement = '1';
+    expect(linearSearch(array, searchElement)).toBe(-1);
+  });
+  test('should return the first index of the number found', () => {
+    const searchElement = 1;
+    expect(linearSearch(array, searchElement)).toBe(2);
+  });
+  test('should return not found when number doesn\'t exist', () => {
+    const searchElement = 5;
+    expect(linearSearch(array, searchElement)).toBe(-1);
   });
 });

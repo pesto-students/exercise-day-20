@@ -35,10 +35,20 @@ function titleize() {}
 */
 function uniqueRandom() {}
 
+const linearSearch = (arr, num) =>
+  arr.indexOf(num);
+  // if (typeof (num) !== 'number') { return -1; }
+  // for (let i = 0; i < arr.length; i += 1) {
+  //   if (num === arr[i]) { return i; }
+  // }
+  // return -2;
+
+
 module.exports = {
   modifyObjectKeys,
   modifyObjectValues,
   stripper,
   titleize,
   uniqueRandom,
+  linearSearch,
 };
